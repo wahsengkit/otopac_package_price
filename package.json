@@ -1,0 +1,40 @@
+{
+  "name": "otopac_price",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "run-ios-debug": "react-native run-ios",
+    "run-android-debug": "react-native run-android",
+    "run-ios": "react-native run-ios --device Android --configuration Release",
+    "run-android": "react-native run-android --variant Release",
+    "release-ios": "appcenter codepush release-react -a ericling0603/Flycar-Auto -d Production --target-binary-version 4.1.x",
+    "release-android": "appcenter codepush release-react -a ericling0603/Flycar-Auto-1 -d Production --target-binary-version 2.0.x",
+    "android-apk": "cd android && ./gradlew assembleRelease",
+    "test": "jest"
+  },
+  "dependencies": {
+    "appcenter": "^1.12.2",
+    "appcenter-analytics": "^1.12.2",
+    "appcenter-crashes": "^1.12.2",
+    "axios": "^0.18.0",
+    "react": "16.6.3",
+    "react-native": "0.58.6",
+    "react-native-code-push": "^5.5.2",
+    "react-native-gesture-handler": "^1.0.17",
+    "react-navigation": "^3.3.2",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.53.0",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
