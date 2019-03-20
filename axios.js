@@ -5,7 +5,11 @@ const fetchMiddleware = (axios) => store => next =>  action => {
             method:'get',
             url,
             params,
-            headers: {...headers},
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': 'Bearer 8d960377b63b8077771e425c6fd11c897e0fcd1c6f61bd0e62c994aeb4e2a11d68b2e546fa0b622cebf14d71eaca7023b2ff0716b783a088a3aff305ec137d31',
+                'store-id': 1,
+            },
         }).catch(function(e){
             console.log(e);
             throw e
@@ -16,7 +20,11 @@ const fetchMiddleware = (axios) => store => next =>  action => {
             method:'post',
             url,
             data,
-            headers: {...headers},
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': 'Bearer 8d960377b63b8077771e425c6fd11c897e0fcd1c6f61bd0e62c994aeb4e2a11d68b2e546fa0b622cebf14d71eaca7023b2ff0716b783a088a3aff305ec137d31',
+                'store-id': 1,
+            },
         }).catch(function(e){
             console.log(e);
             throw e

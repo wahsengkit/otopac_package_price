@@ -33,6 +33,10 @@ target 'otopac_price' do
   pod 'CodePush', :path => '../node_modules/react-native-code-push'
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
+  pod 'react-native-youtube', :path => '../node_modules/react-native-youtube'
+
   target 'otopac_priceTests' do
     inherit! :search_paths
     # Pods for testing

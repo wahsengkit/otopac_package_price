@@ -3,6 +3,8 @@ package com.otopac_price;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+//import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
+import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.microsoft.codepush.react.CodePush;
 import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
@@ -34,6 +36,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+//            new ReactNativeYouTube(),
+            new RNCWebViewPackage(),
             new RNGestureHandlerPackage(),
             new CodePush(null, getApplicationContext(), BuildConfig.DEBUG),
             new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),

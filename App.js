@@ -17,7 +17,7 @@ let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,in
 import instance from 'axios';
 const axios = instance.create({
     withCredentials: true,
-    baseURL: "https://api.otopac.com.hk"
+    baseURL: "https://aapi.otopac.com.hk"
 });
 import {fetchMiddleware} from './axios';
 let middleware = [thunk, fetchMiddleware(axios)];
@@ -27,7 +27,7 @@ if (process.env.NODE_ENV !== 'production') {
             //console.log('will dispatch', action);
             // Call the next dispatch method in the middleware chain.
             let returnValue = next(action)
-            console.log('state after' +action.type, getState())
+            // console.log('state after' +action.type, getState())
             // This will likely be the action itself, unless
             // a middleware further in chain changed it.
             return returnValue
@@ -39,13 +39,13 @@ if (process.env.NODE_ENV !== 'production') {
 store = createStore(reducers, {},  applyMiddleware(...middleware));
 type Props = {};
 class App extends Component<Props> {
-  render() {
-    return (
-        <Provider store={store}>
-            <RootNavigation/>
-        </Provider>
-    );
-  }
+    render() {
+        return (
+            <Provider store={store}>
+                <RootNavigation/>
+            </Provider>
+        );
+    }
 }
 
 App = codePush(codePushOptions)(App);
